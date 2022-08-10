@@ -3,7 +3,7 @@ services:
 
   teampass-web:
     build: .
-    image: teampass_teampass-web
+    image: teampasswordmanager/teampasswordmanager
     restart: unless-stopped
     environment:
       VIRTUAL_PORT: teampass.test

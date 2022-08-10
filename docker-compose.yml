@@ -3,7 +3,7 @@ services:
 
   teampass-web:
     build: .
-    image: teampass/teampass
+    image: teampass_teampass-web
     restart: unless-stopped
     environment:
       VIRTUAL_PORT: teampass.test

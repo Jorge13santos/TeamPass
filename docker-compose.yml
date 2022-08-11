@@ -5,6 +5,7 @@ services:
     restart: unless-stopped
     networks:
       - frontend
+      - backend
     ports:
       - "443:443"
     volumes:
@@ -23,7 +24,7 @@ services:
     volumes:
       - ./teampass-html:/var/www/html
     networks:
-      - frontend
+      - teampass-internal
       - backend
   db:
     container_name: teampass-db
@@ -41,6 +42,7 @@ services:
       - ./teampass-db:/var/lib/mysql
     networks:
       - backend
+      - teampass-internal
 
 networks:
   frontend:
